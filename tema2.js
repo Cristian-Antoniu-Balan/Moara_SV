@@ -1,10 +1,34 @@
 // *** ex.1 ***
 calculateEven = (num) => (Math.abs(num % 2) === 1) ? num * 2 : num - 2
-// console.log(calculateEven(-82));
+console.log(calculateEven(-82));
 
 // *** ex.2 ***
-const startArrEx2 = [-1, -89, -8, 7, 8, 3, 55, 3, 4];
+const startArrEx2 = [-1, -89, -8, 7, 8, 3, 55, 3, 4, 5, 8, 23];
 
+function checkPrimes (arr) {
+    let allPrimes = [];
+    for (let i = 1; i < arr.length; i++) {
+        let j = 2
+        let isPrime = true
+        if (arr[i] < 2) {
+            continue;
+        }
+        for (let j = 2; j < arr[i]; j++) {
+            if ((arr[i] % j) === 0) {
+                isPrime = false;
+                j = arr[i];
+            }
+        }
+        if ((isPrime) && !allPrimes.includes(arr[i])) {
+            allPrimes.push(arr[i])
+            };
+    }
+    return allPrimes;
+}
+
+console.log(checkPrimes(startArrEx2));
+
+/*
 function generatePrimes (max) {
     let allPrimes = [1, 2, 3];
     for (let i = 4; i <= max; i++) {
@@ -35,6 +59,7 @@ const savePrimes = function (arr) {
     }
     return saves;
 }
+*/
 
 //console.log(savePrimes(startArrEx2));
 
@@ -47,19 +72,24 @@ const saveStrings = function (arr) {
     return saves;
 }
 
-// console.log(saveStrings(startArrEx3));
+console.log(saveStrings(startArrEx3));
 
 // *** ex.4 ***
 const numAsString = `83275421`;
 const sumOdd = function (num) {
     let sum = 0;
     for (let i = 0; i < num.length; i++) {
-        (Number(num[i]) % 2 === 1) ? sum += Number(num[i]) : null;
+        if (Number(num[i]) % 2 === 1) {
+            sum += Number(num[i])
+        } 
+        else {
+            continue
+        };
     }
     return sum;
 }
 
-// console.log(sumOdd(numAsString));
+console.log(sumOdd(numAsString));
 
 // *** ex.5 ***
 // const currentMonth = new Date().getMonth();
