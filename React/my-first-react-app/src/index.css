@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.exercitiu {
+  border: 2px dashed;
+  text-align: cernter;
+  padding: 5px;
+  margin: 5px 2px;
+  font-size: 10px;
+}
+
+.cutie {
+  border: 1px solid;
+  border-radius: 3px;
+  width: 100px;
+  height: 100px;
+  margin:2px;
+}
+
+.eticheta {
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 1px;
+  height: 10px;
+  font-size: 8px;
+  align-content: center;
+  background-color: lightblue;
+}
+
+/*
+.categorie {
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 1px;
+  height: 10px;
+  font-size: 8px;
+  align-content: center;
+}
+
+.denumire {
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 1px;
+  height: 10px;
+  font-size: 8px;
+  align-content: center;
+}
+*/
+
+.pret {
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 15px 15px 5px 15px;
+  padding: 2px;
+  height: 20px;
+  font-size: 16px;
+  align-content: center;
+  background-color: lightgrey;
+}
+
+.nume {
+  font-size: 16px;
+}
+
+.nume.colorat {
+  color: lightskyblue;
+}
+
+.nume:hover {
+  cursor: grabbing;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.d-flex {
+  display: flex;
+}
