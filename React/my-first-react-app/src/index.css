@@ -14,7 +14,7 @@ code {
 
 .exercitiu {
   border: 2px dashed;
-  text-align: cernter;
+  text-align: center;
   padding: 5px;
   margin: 5px 2px;
   font-size: 10px;
@@ -90,4 +90,48 @@ code {
 
 .d-flex {
   display: flex;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.div-grad {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  margin: 2px;
+  display: inline-block;
+}
+
+.form-culoare {
+  width: 60px;
+  height: 60px;
+  border: 1px solid;
+  align-self: center;
+  margin: 5px;
+  padding: 2px;
+}
+
+.culoare {
+  width: 90px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 1px;
+  font-size: 10px;
+  text-align: left;
+}
+
+.text {
+  display: inline-block;
+}
+
+.del-button {
+  width: 40px;
+  height: 16px;
+  font-size: 8px;
+  float: right;
 }

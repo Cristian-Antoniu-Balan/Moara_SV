@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react"
 import PropTypes from 'prop-types'
 
 const Produs = (props) => {
+
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 5000);
+  }, [])
+
+  if (props.loading && !loaded) return <div>Loading, please wait...</div>
+
   return (
     <div className="cutie" style={{backgroundColor: props.culoare}}>
       <div className="eticheta categorie">{`${props.categorie}`}</div>
