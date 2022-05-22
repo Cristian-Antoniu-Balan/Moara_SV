@@ -17,6 +17,21 @@ server.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
 
+
+io.on("connection", (socket) => {
+  console.log(`[SOCKET CONNECTED] ${socket.id}`);
+
+  socket.emit("connected");
+
+  socket.on("newMessage", (bundle) => {
+    // console.log(bundle);
+    //io.emit("receivedMessage", `${bundle.userName}: ${bundle.currentMessage}`);
+    socket.broadcast.emit("userMessage", (bundle.userName));
+    io.emit("receivedMessage", (bundle));
+  });
+});
+
+/* v.01 NOT WORKING
 io.on("connection", (socket) => {
   console.log(`[SOCKET CONNECTED] ${socket.id}`);
   socket.emit("connected");
@@ -25,5 +40,7 @@ io.on("connection", (socket) => {
     console.log(bundle);
     // io.emit("receivedMessage", `${bundle.userName}: ${bundle.messageContent}`);
     io.emit("receivedMessage", bundle);
-  })
-});
+  });
+  
+});*/
+

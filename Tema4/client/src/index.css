@@ -26,6 +26,14 @@ code {
   grid-template-columns: calc(var(--mainWidth) * 0.18) 1fr;
 }
 
+.hiddenName {
+  visibility: hidden;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 .Chatbox {
   width: var(--mainWidth);
   height: var(--mainHeight);
@@ -33,10 +41,6 @@ code {
   margin: 2px;
   padding: 2px;
   overflow-y: scroll;
-}
-
-.test {
-  
 }
 
 .Messagebox {
@@ -60,6 +64,10 @@ code {
   display: inline-block;
 }
 
+.Mine {
+  float:right;
+}
+
 .Nameinput {
   width: calc(var(--mainWidth) * 0.25);
   margin: 2px;
@@ -81,4 +89,16 @@ code {
 
 .Sendbutton {
   width: calc(var(--mainWidth) * 0.12)
+}
+
+.Notification {
+  margin: 5px;
+  padding: 3px;
+  border-radius: 2px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: deepskyblue;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
 }

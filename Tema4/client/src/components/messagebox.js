@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Messagebox = (props) => {
     return (
-        <div className="Messagebox">{`${props.messageContent}`}</div>
+        <div className={"Messagebox".concat(props.isMine?" Mine":"")}>{`${props.messageContent}`}</div>
     )
 };
 

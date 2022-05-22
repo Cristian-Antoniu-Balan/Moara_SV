@@ -4,14 +4,14 @@ const Messageinput = (props) => {
 
     const [messageContent, setMessageContent] = useState("");
 
-    const sendMessage = (e) => {
+    const sendMessage = () => {
         (messageContent !== "") && props.handleClick(messageContent);
         setMessageContent("");
-    }
+    };
 
     const handleChange = (e) => {
         setMessageContent(e.target.value);
-    }
+    };
 
     return (
         <div className="Messageinputcontainer">
