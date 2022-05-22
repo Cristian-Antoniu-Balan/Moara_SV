@@ -39,7 +39,7 @@ code {
   
 }
 
-.Message {
+.Messagebox {
   width: fit-content;
   max-width: calc(var(--mainWidth) * 0.65);
   border-radius: 5px;

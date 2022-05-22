@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Message from "./message";
+import Messagebox from "./messagebox";
 import Namebox from "./namebox";
 
 const Chatbox = (props) => {
@@ -18,11 +18,11 @@ const [ messages, setMessages ] = useState([]);
         <div className="Chatbox">
             <div>
                 <Namebox userName="testdfasdfsdgdsfgdsgdfg1"/>
-                <Message messageContent="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+                <Messagebox messageContent="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
             </div>
             <div>
                 <Namebox userName="test21"/>
-                <Message messageContent="eee" style={{float: "right"}}/>
+                <Messagebox messageContent="eee" style={{float: "right"}}/>
             </div>
         </div>
     )
