@@ -8,9 +8,11 @@ function App() {
   const [connectedSocket, setConnectedSocket] = useState();
   const [wasSubmited, setWasSubmited] = useState(false);
   const [feedbackGrid, setFeedbackGrid] = useState([]);
+  const [isBoardAvailable, setIsBoardAvailable] = useState(false);
 
   function updateGrid(grid) {
     let arr = [];
+    setIsBoardAvailable(false);
     for (let i=0; i<grid.length; i++) {
       arr[i]=[];
       for (let j=0; j<grid[i].length; j++) {
@@ -21,6 +23,7 @@ function App() {
             isSelected: grid[i][j].isSelected,
             isAvailable: grid[i][j].isAvailable,
           }
+        if (arr[i][j].isAvailable) {setIsBoardAvailable(true)}
       }
     }
     return arr;
@@ -76,7 +79,9 @@ function App() {
 
   return (
     <>
-      {(!wasSubmited)
+      {(!isBoardAvailable)
+        ?<div className="input-container">No card available for feedback!</div>
+        :(!wasSubmited)
         ?<FeedbackInput send={sendToServer} disable={checkDisable()}/>
         :<div className="input-container">Thank you for the feedback!</div>}
       <div
